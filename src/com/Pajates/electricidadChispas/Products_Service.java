@@ -8,7 +8,7 @@ public interface Products_Service {
 
     public String getIvaType();
 
-    public String getId();
+    public int getId();
 
 
 

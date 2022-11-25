@@ -1,12 +1,11 @@
 package com.Pajates.electricidadChispas;
 
-public class Invoice {
+public class Invoice{
 
     private Integer idInvoice;
     private String date;
-    private String client;
-    private String product;
-    private String service;
+    private Client client;
+    private Products_Service product;
     private String baseImponible;
 
     private String total;
@@ -27,32 +26,25 @@ public class Invoice {
     }
 
     public void setClient(Society client) {
-        this.client = String.valueOf(client);
+        this.client = client;
     }
 
     public void setClient(Autonomus client) {
-        this.client = String.valueOf(client);
+        this.client = client;
     }
 
-    public String getClient() {
+    public Client getClient() {
         return client;
     }
 
     public void setProduct(Product product) {
-        this.product = String.valueOf(product);
+        this.product = product;
     }
 
-    public String getProduct() {
+    public Products_Service getProduct() {
         return product;
     }
 
-    public void setService(Service service) {
-        this.service = String.valueOf(service);
-    }
-
-    public String getService() {
-        return service;
-    }
 
     public void setBaseImponible(String baseImponible) {
         this.baseImponible = baseImponible;

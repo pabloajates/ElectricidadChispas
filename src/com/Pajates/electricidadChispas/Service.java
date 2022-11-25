@@ -2,7 +2,7 @@ package com.Pajates.electricidadChispas;
 
 public class Service implements Products_Service{
 
-    private String idService;
+    private int idService;
     private String name;
     private String price;
     private String ivaType;
@@ -28,16 +28,16 @@ public class Service implements Products_Service{
 
 
     @Override
-    public String getId() {
+    public int getId() {
 
         return this.idService;
     }
 
-    public void setIdService(String idService) {
+    public void setIdService(int idService) {
         this.idService = idService;
     }
 
-    public void setName(Autonomus name) {
+    public void setName(String name) {
         this.name = String.valueOf(name);
     }
 

@@ -2,7 +2,7 @@ package com.Pajates.electricidadChispas;
 
 public class Product implements Products_Service{
 
-    private String idProduct;
+    private int idProduct;
     private String name;
     private String brand;
     private String model;
@@ -30,7 +30,7 @@ public class Product implements Products_Service{
     }
 
     @Override
-    public String getId() {
+    public int getId() {
         return this.idProduct;
     }
 
