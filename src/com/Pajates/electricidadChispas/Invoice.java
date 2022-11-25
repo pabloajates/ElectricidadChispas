@@ -5,7 +5,8 @@ public class Invoice{
     private Integer idInvoice;
     private String date;
     private Client client;
-    private Products_Service productsService;
+    private Products_Service producto;
+    private Products_Service servicio;
     private Integer baseImponible;
     private Integer total;
     public void setIdInvoice(Integer idInvoice) {
@@ -36,14 +37,21 @@ public class Invoice{
         return client;
     }
 
-    public void setProductsService(Product productsService) {
-        this.productsService = productsService;
+    public void setProducto(Products_Service producto) {
+        this.producto = producto;
     }
 
-    public Products_Service getProductsService() {
-        return productsService;
+    public Products_Service getProducto() {
+        return producto;
     }
 
+    public void setServicio(Products_Service servicio) {
+        this.servicio = servicio;
+    }
+
+    public Products_Service getServicio() {
+        return servicio;
+    }
 
     public void setBaseImponible(Integer baseImponible) {
         this.baseImponible = baseImponible;

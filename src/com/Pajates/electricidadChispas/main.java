@@ -111,7 +111,8 @@ public class main {
         factura.setDate(sc.nextLine());
         System.out.println("Cliente: ");
         factura.setClient(autonomo);
-        factura.setProductsService(producto);
+        factura.setProducto(producto);
+        factura.setServicio(service1);
         System.out.println("Base Imponible: ");
         System.out.println("Total");
         System.out.println(" ");
@@ -125,7 +126,8 @@ public class main {
         factura1.setDate(sc.nextLine());
         System.out.println("Cliente: ");
         factura1.setClient(autonomo);
-        factura1.setProductsService(producto);
+        factura1.setProducto(producto);
+        factura1.setServicio(servicio);
         System.out.println("Base Imponible: " +producto1.getPrice() +" + "+servicio.getPrice());
         System.out.println("Total: " +producto.getPrice() +" + " +service1.getPrice() +" + IVA = " );
         System.out.println(" ");

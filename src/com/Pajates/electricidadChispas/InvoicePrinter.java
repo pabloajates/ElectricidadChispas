@@ -15,17 +15,17 @@ public class InvoicePrinter {
         System.out.println("telefono: " + factura1.getClient().getPhone());
         System.out.println("email: " + factura1.getClient().getEmail());
         System.out.println("Producto");
-        System.out.println("codigo: " + factura1.getProductsService().getId());
-        System.out.println("nombre: " + factura1.getProductsService().getName());
-        System.out.println("precio: " + factura1.getProductsService().getPrice());
-        System.out.println("tipo IVA: " + factura1.getProductsService().getIvaType());
+        System.out.println("codigo: " + factura1.getProducto().getId());
+        System.out.println("nombre: " + factura1.getProducto().getName());
+        System.out.println("precio: " + factura1.getProducto().getPrice());
+        System.out.println("tipo IVA: " + factura1.getProducto().getIvaType());
         System.out.println("Servicio");
-        System.out.println("codigo: " + factura1.getProductsService().getId());
-        System.out.println("nombre: " + factura1.getProductsService().getName());
-        System.out.println("precio: " + factura1.getProductsService().getPrice());
-        System.out.println("tipo IVA: " + factura1.getProductsService().getIvaType());
+        System.out.println("codigo: " + factura1.getServicio().getId());
+        System.out.println("nombre: " + factura1.getServicio().getName());
+        System.out.println("precio: " + factura1.getServicio().getPrice());
+        System.out.println("tipo IVA: " + factura1.getServicio().getIvaType());
         System.out.println(" ");
-        System.out.println("Total: " + (factura1.getProductsService().getPrice()) + factura1.getProductsService().getPrice());
+        System.out.println("Total: " + (factura1.getProducto().getPrice()) + factura1.getServicio().getPrice());
     }
     public static void print1 (Invoice factura) {
 
@@ -40,17 +40,17 @@ public class InvoicePrinter {
         System.out.println("telefono: " + factura.getClient().getPhone());
         System.out.println("email: " + factura.getClient().getEmail());
         System.out.println("Producto");
-        System.out.println("codigo: " + factura.getProductsService().getId());
-        System.out.println("nombre: " + factura.getProductsService().getName());
-        System.out.println("precio: " + factura.getProductsService().getPrice());
-        System.out.println("tipo IVA: " + factura.getProductsService().getIvaType());
+        System.out.println("codigo: " + factura.getProducto().getId());
+        System.out.println("nombre: " + factura.getProducto().getName());
+        System.out.println("precio: " + factura.getProducto().getPrice());
+        System.out.println("tipo IVA: " + factura.getProducto().getIvaType());
         System.out.println("Servicio");
-        System.out.println("codigo: " + factura.getProductsService().getId());
-        System.out.println("nombre: " + factura.getProductsService().getName());
-        System.out.println("precio: " + factura.getProductsService().getPrice());
-        System.out.println("tipo IVA: " + factura.getProductsService().getIvaType());
+        System.out.println("codigo: " + factura.getServicio().getId());
+        System.out.println("nombre: " + factura.getServicio().getName());
+        System.out.println("precio: " + factura.getServicio().getPrice());
+        System.out.println("tipo IVA: " + factura.getServicio().getIvaType());
         System.out.println(" ");
-        System.out.println("Total: " + (factura.getProductsService().getPrice()) + factura.getProductsService().getPrice());
+        System.out.println("Total: " + (factura.getProducto().getPrice()) + factura.getServicio().getPrice());
 
     }
 }
