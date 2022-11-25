@@ -1,18 +1,21 @@
 ## Description de la tarea
 
-<!-- Descripción sobre lo que se pide en la tarea -->
+Gestion de productos y servicios para clientes (autonomos y sociedades)
 
 ## ¿Cómo se ha implementado?
 
-<!-- Estructura de clases, patrones: MVVM, etc.  -->
+Con diferentes entidades (autonomo, productos..) y con interfaces entre estas.
+Con la utilidad sccaner para poder meter datos por el teclado
+Con el comando (ejemplo:InvoicePrinter.print(factura);) para que t muestre todo el contenido de una clase 
 
 ## Keywords
+Autonomus, Society, Invoice, InvoicePrinter, Main, Product, Product_service, Service
 
-<!-- Palabras relacionadas con los conceptos vistos -->
 
 ## Screenshots or Video
 
-<!-- Captura de pantalla de la consola -->
+![image](https://user-images.githubusercontent.com/115726046/204032136-ea98372d-ff3c-434d-9492-98738ff14729.png)
+
 
 ## Disclaimer
 
