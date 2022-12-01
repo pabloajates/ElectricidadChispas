@@ -1,6 +1,6 @@
-package com.Pajates.electricidadChispas;
+package com.Pajates.electricidadChispas.Domain.models;
 
-public class Autonomus implements Client{
+public class Autonomus implements Client {
 
     private String dni;
     private String name;

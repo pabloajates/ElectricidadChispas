@@ -1,11 +1,9 @@
-package com.Pajates.electricidadChispas;
+package com.Pajates.electricidadChispas.Domain.models;
 
-public class Product implements Products_Service{
+public class Service implements Products_Service {
 
-    private String idProduct;
+    private String idService;
     private String name;
-    private String brand;
-    private String model;
     private String price;
     private String ivaType;
 
@@ -13,33 +11,34 @@ public class Product implements Products_Service{
     @Override
     public String getName() {
 
-        return this.name +"" +brand +"" +model;
+        return this.name;
     }
 
     @Override
     public String getPrice() {
 
-        return this.price;
+        return String.valueOf(this.price);
     }
-
 
     @Override
     public String getIvaType() {
 
-        return this.ivaType;
+        return String.valueOf(this.ivaType);
     }
+
 
     @Override
     public String getId() {
-        return this.idProduct;
+
+        return this.idService;
     }
 
-    public void setIdProduct(String s) {
-        this.idProduct = idProduct;
+    public void setIdService(String idService) {
+        this.idService = idService;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = String.valueOf(name);
     }
 
     public void setPrice(String price) {
@@ -50,5 +49,3 @@ public class Product implements Products_Service{
         this.ivaType = ivaType;
     }
 }
-
-

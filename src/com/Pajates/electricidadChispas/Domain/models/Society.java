@@ -1,4 +1,6 @@
-package com.Pajates.electricidadChispas;
+package com.Pajates.electricidadChispas.Domain.models;
+
+import com.Pajates.electricidadChispas.Domain.models.Client;
 
 public class Society implements Client {
 

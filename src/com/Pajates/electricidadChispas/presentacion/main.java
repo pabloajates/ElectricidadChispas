@@ -1,5 +1,8 @@
-package com.Pajates.electricidadChispas;
+package com.Pajates.electricidadChispas.presentacion;
 
+
+import com.Pajates.electricidadChispas.Domain.models.*;
+import com.Pajates.electricidadChispas.presentacion.InvoicePrinter;
 
 import java.util.Scanner;
 
@@ -130,6 +133,11 @@ public class main {
         System.out.println("Base Imponible: " +producto1.getPrice() +" + "+servicio.getPrice());
         System.out.println("Total: " +producto.getPrice() +" + " +service1.getPrice() +" + IVA = " );
         System.out.println(" ");
+
+
+
+
+
 
 
         //Impresion factura

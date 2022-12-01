@@ -1,4 +1,6 @@
-package com.Pajates.electricidadChispas;
+package com.Pajates.electricidadChispas.presentacion;
+
+import com.Pajates.electricidadChispas.Domain.models.Invoice;
 
 public class InvoicePrinter {
 

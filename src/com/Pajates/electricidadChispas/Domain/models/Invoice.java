@@ -1,4 +1,4 @@
-package com.Pajates.electricidadChispas;
+package com.Pajates.electricidadChispas.Domain.models;
 
 public class Invoice{
 
