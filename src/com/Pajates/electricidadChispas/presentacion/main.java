@@ -1,9 +1,16 @@
 package com.Pajates.electricidadChispas.presentacion;
 
 
+import com.Pajates.electricidadChispas.Data.CustomerDataStore;
+import com.Pajates.electricidadChispas.Data.MemCustomerDataStore;
 import com.Pajates.electricidadChispas.Domain.models.*;
+import com.Pajates.electricidadChispas.Domain.useCase.AddCustomerUseCase;
+import com.Pajates.electricidadChispas.Domain.useCase.DeleteCustomerUseCase;
+import com.Pajates.electricidadChispas.Domain.useCase.GetCustomersUseCase;
+import com.Pajates.electricidadChispas.Domain.useCase.UpdateCustomerUseCase;
 import com.Pajates.electricidadChispas.presentacion.InvoicePrinter;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class main {
@@ -134,10 +141,35 @@ public class main {
         System.out.println("Total: " +producto.getPrice() +" + " +service1.getPrice() +" + IVA = " );
         System.out.println(" ");
 
+        CustomerDataStore customerDataStore = new MemCustomerDataStore();
 
+        AddCustomerUseCase addCustomerUseCase = new AddCustomerUseCase(customerDataStore);
+        addCustomerUseCase.execute(autonomo);
+        addCustomerUseCase.execute(sociedad);
 
+        GetCustomersUseCase getCustomersUseCase = new GetCustomersUseCase(customerDataStore);
+        List<Client> customers = getCustomersUseCase.execute();
+        for (int i = 0; i < customers.size(); i++){
+            //printClient(customers.get(i));
+        }
 
+        System.out.println("-------ELIMINANDO-------");
 
+        DeleteCustomerUseCase deleteCustomerUseCase = new DeleteCustomerUseCase(customerDataStore);
+        deleteCustomerUseCase.execute(autonomo);
+        List<Client> customers2 = getCustomersUseCase.execute();
+        for (int i = 0; i <customers2.size(); i++)
+           //printClient(customers2.get(i));
+
+            System.out.println("----- Modificando la Sociedad ------");
+
+        sociedad.setEmail("0000000000");
+        UpdateCustomerUseCase updateCustomerUseCase = new UpdateCustomerUseCase(customerDataStore);
+        updateCustomerUseCase.execute(sociedad);
+        List<Client> customers3 = getCustomersUseCase.execute();
+        for (int i = 0; i < customers3.size(); i++) {
+           // printCliente(customers3.get(i));
+        }
 
 
         //Impresion factura
