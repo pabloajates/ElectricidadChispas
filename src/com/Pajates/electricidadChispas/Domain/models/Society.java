@@ -1,7 +1,5 @@
 package com.Pajates.electricidadChispas.Domain.models;
 
-import com.Pajates.electricidadChispas.Domain.models.Client;
-
 public class Society implements Client {
 
     private String cif;
@@ -13,7 +11,7 @@ public class Society implements Client {
     private String phone;
 
     @Override
-    public String getId() {
+    public Integer getId() {
         return this.cif;
     }
     @Override

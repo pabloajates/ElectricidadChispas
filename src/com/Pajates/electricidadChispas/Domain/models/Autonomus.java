@@ -14,7 +14,7 @@ public class Autonomus implements Client {
 
 
     @Override
-    public String getId() {
+    public Integer getId() {
         return this.dni;
     }
     @Override
