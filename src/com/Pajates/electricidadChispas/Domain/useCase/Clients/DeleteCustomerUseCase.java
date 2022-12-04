@@ -1,4 +1,4 @@
-package com.Pajates.electricidadChispas.Domain.useCase;
+package com.Pajates.electricidadChispas.Domain.useCase.Clients;
 
 import com.Pajates.electricidadChispas.Data.CustomerDataStore;
 import com.Pajates.electricidadChispas.Domain.models.Client;

@@ -2,7 +2,7 @@ package com.Pajates.electricidadChispas.Domain.models;
 
 public class Product implements Products_Service {
 
-    private String idProduct;
+    private Integer idProduct;
     private String name;
     private String brand;
     private String model;
@@ -30,11 +30,11 @@ public class Product implements Products_Service {
     }
 
     @Override
-    public String getId() {
+    public Integer getId() {
         return this.idProduct;
     }
 
-    public void setIdProduct(String s) {
+    public void setIdProduct(Integer idProduct) {
         this.idProduct = idProduct;
     }
 

@@ -12,7 +12,7 @@ public class Society implements Client {
 
     @Override
     public Integer getId() {
-        return this.cif;
+        return Integer.valueOf(this.cif);
     }
     @Override
     public String getName() {
