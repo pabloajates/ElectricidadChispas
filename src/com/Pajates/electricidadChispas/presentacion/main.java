@@ -8,9 +8,7 @@ import com.Pajates.electricidadChispas.Domain.useCase.Clients.DeleteCustomerUseC
 import com.Pajates.electricidadChispas.Domain.useCase.Clients.GetCustomersUseCase;
 import com.Pajates.electricidadChispas.Domain.useCase.Clients.UpdateCustomerUseCase;
 import com.Pajates.electricidadChispas.Domain.useCase.Invoice.AddInvoiceUseCase;
-import com.Pajates.electricidadChispas.Domain.useCase.Invoice.DeleteInvoiceUseCase;
 import com.Pajates.electricidadChispas.Domain.useCase.Invoice.GetInvoiceUseCase;
-import com.Pajates.electricidadChispas.Domain.useCase.Invoice.UpdateInvoiceUseCase;
 import com.Pajates.electricidadChispas.Domain.useCase.Items.AddItemUseCase;
 import com.Pajates.electricidadChispas.Domain.useCase.Items.DeleteItemUseCase;
 import com.Pajates.electricidadChispas.Domain.useCase.Items.GetItemUseCase;
@@ -223,28 +221,8 @@ public class main {
         GetInvoiceUseCase getInvoiceUseCase = new GetInvoiceUseCase(invoiceDataStore);
         List<Invoice> invoice = getInvoiceUseCase.execute();
         for (int i = 0; i < invoice.size(); i++){
-            // printInvoice(invoice.get(i));
+            //printInvoice(invoice.get(i));
         }
-
-        System.out.println("-------ELIMINANDO-------");
-
-        DeleteInvoiceUseCase deleteInvoiceUseCase = new DeleteInvoiceUseCase(invoiceDataStore);
-        deleteInvoiceUseCase.execute(factura1);
-        List<Invoice> invoice1 = getInvoiceUseCase.execute();
-        for (int i = 0; i <invoice1.size(); i++)
-            System.out.println(invoice1.get(i));
-
-
-            System.out.println("----- Modificando el producto------");
-
-        factura1.setDate("20-2-2022");
-        UpdateInvoiceUseCase updateInvoiceUseCase = new UpdateInvoiceUseCase(invoiceDataStore);
-        updateInvoiceUseCase.execute(factura1);
-        List<Invoice> invoice2 = getInvoiceUseCase.execute();
-        for (int i = 0; i < invoice2.size(); i++) {
-           // printInvoice(invoice2.get(i));
-        }
-
 
 
         //Impresion factura
@@ -255,4 +233,6 @@ public class main {
         System.out.println("Impresion de 2º factura");
         InvoicePrinter.print(factura1);
     }
+
+
 }
